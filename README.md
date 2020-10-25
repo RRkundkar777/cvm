@@ -7,6 +7,6 @@ Ctrans is a shell similar to the Python Shell.
 Only difference is that it is a Shell for C language.
 
 ## The C Virtual Machine
-The C virtual Machine is the C Code Extractor and Interpreter.
+The C Virtual Machine is the C Code Extractor and Interpreter.
 
-It can run embedded C codes from a text file as well as many other compatible formats.
+It can directly run embedded C codes from a text file as well as many other compatible formats.
