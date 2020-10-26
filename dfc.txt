@@ -1,2 +1,0 @@
-Python is NOT Best
-Clang is BEST
