@@ -1,17 +1,19 @@
 #! /usr/bin/bash
 
 # Creating a Skeleton Program File
-touch shell.c
-echo "/* Title : " >> shell.c
-echo "Author : " >> shell.c
-echo "Date : " >> shell.c
-echo "Status : " >> shell.c
-echo "Last Edited :  */" >> shell.c
-echo "#include<stdio.h>" >> shell.c
-echo "#include<stdlib.h>" >> shell.c
-echo "#include<limits.h>" >> shell.c
-echo "int main(){" >> shell.c
-echo -e "\n" >> shell.c
+touch shell.cpp
+echo "/* Title : " >> shell.cpp
+echo "Author : " >> shell.cpp
+echo "Date : " >> shell.cpp
+echo "Status : " >> shell.cpp
+echo "Last Edited :  */" >> shell.cpp
+echo "#include<stdio.h>" >> shell.cpp
+echo "#include<stdlib.h>" >> shell.cpp
+echo "#include<limits.h>" >> shell.cpp
+echo "#include<bits/stdc++.h>" >> shell.cpp
+echo "using namespace std;" >> shell.cpp
+echo "int main(){" >> shell.cpp
+echo -e "\n" >> shell.cpp
 
 echo "Ctrans 1.0.0 (default, Oct17 2020, 14:00:26)" 
 echo "[GCC 9.3.0] on linux"
@@ -27,13 +29,13 @@ do
 	# Running the Skeleton File
 	if [ $line == "run" ]
 	then
-		echo "	return 0;" >> shell.c
-		echo "}" >> shell.c
+		echo "	return 0;" >> shell.cpp
+		echo "}" >> shell.cpp
 		
-		if [ -w shell.c ]
+		if [ -w shell.cpp ]
 		then
-			gcc shell.c -o shell
-			rm shell.c
+			g++ shell.cpp -o shell
+			rm shell.cpp
 		fi
 		
 		if [ -w shell ]
@@ -42,32 +44,32 @@ do
 			rm shell
 		fi
 		
-		touch shell.c
-		echo "/* Title : " >> shell.c
-		echo "Author : " >> shell.c
-		echo "Date : " >> shell.c
-		echo "Status : " >> shell.c
-		echo "Last Edited :  */" >> shell.c
-		echo "#include<stdio.h>" >> shell.c
-		echo "#include<stdlib.h>" >> shell.c
-		echo "#include<limits.h>" >> shell.c
-		echo "int main(){" >> shell.c
-		echo -e "\n" >> shell.c
+		touch shell.cpp
+		echo "/* Title : " >> shell.cpp
+		echo "Author : " >> shell.cpp
+		echo "Date : " >> shell.cpp
+		echo "Status : " >> shell.cpp
+		echo "Last Edited :  */" >> shell.cpp
+		echo "#include<stdio.h>" >> shell.cpp
+		echo "#include<stdlib.h>" >> shell.cpp
+		echo "#include<limits.h>" >> shell.cpp
+		echo "int main(){" >> shell.cpp
+		echo -e "\n" >> shell.cpp
 		
 	#Exiting the Shell
 	elif [ $line == "exit" ]
 	then
 		break
 	else 
-		echo $line >> shell.c
+		echo $line >> shell.cpp
 	fi
 done
 
 #REMOVAL OF DUMPS
-# If shell.c exist only then remove it
-if [ -w shell.c ]
+# If shell.cpp exist only then remove it
+if [ -w shell.cpp ]
 then
-	rm shell.c
+	rm shell.cpp
 fi
 # If shell exists only then remove it
 if [ -w shell ]
